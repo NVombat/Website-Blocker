@@ -10,7 +10,7 @@ original_hosts_path = "/etc/hosts"
 redirect_ip = "127.0.0.1"
 #Lists of domain names of websites to block
 website_block_list = ["www.facebook.com", "facebook.com", "www.twitter.com",
-"twitter.com", "www.instagram.com", "instagram.com"]
+"twitter.com", "www.instagram.com", "instagram.com", "www.youtube.com", "youtube.com"]
 
 
 #Runs indefinitely
