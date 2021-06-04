@@ -1,0 +1,42 @@
+STEP1:
+Locate the "hosts" file on your machine and save its path in a variable
+"/etc/hosts" -> MAC & LINUX
+r"C:\Windows\System32\drivers\etc\hosts" -> WINDOWS
+
+STEP2: (MAC & LINUX)
+To run the python script from the terminal add "hosts" file  path to the original_hosts_path variable
+Go to command line and type "sudo python3 blocker.py"
+After running the previous command, type in your password and it will run
+
+STEP2: (WINDOWS)
+Locate the command line application
+Right click the icon and click "Run As Administrator"
+Use "cd" command to enter the directory where the python script is located
+Type "python blocker.py" and run the command
+The program runs
+
+------------------------------------------------------------------------------------------------------
+TO MAKE THE WEBSITE BLOCKER RUN IN THE BACKGROUND AS A PROCESS WHEN THE LAPTOP STARTS:
+
+WINDOWS:
+We need to use pythonw.exe -> To run programs in the BACKGROUND
+For this we change extension of script to .pyw -> blocker.pyw
+Now double click on the program and it will run in the background
+This can be verified in task manager -> pythonw.exe
+However it will not run as the hosts file needs Administrator Access
+
+Go to the Task Scheduler -> Create Task
+Under "General" Name the task "Website Blocker" or any name you want
+Under "General" check "Run with highest priveleges" so that it can access the hosts file
+Under "Triggers" click on "New" and select "At Startup" for when to begin the program
+Under "Actions" select "Run a program" and enter the program that is to be run -> blocker.pyw
+Under "Conditions" Uncheck the power option that says to run only if AC Power is plugged in
+Press "OK" and the task has been scheduled and the program should run in the background on Startup
+
+LINUX & MAC:
+We need to use the cron service to schedule the task
+sudo crontab -e -> opens crontab file as an administrator
+"@reboot python3 /home/nvombat/Desktop/Website-Blocker/blocker.py" Add this task to the crontab
+Ctrl X Ctrl Y to save and exit
+
+NOTE: USE ABSOLUTE PATHS AS THE SCHEDULERS WORK FROM DIFFERENT DIRECTORIES
