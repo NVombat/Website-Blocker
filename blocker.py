@@ -15,7 +15,7 @@ website_block_list = ["www.facebook.com", "facebook.com", "www.twitter.com",
 
 #Runs indefinitely
 while True:
-    #Set a time period to block the websites
+    #Set a time period to block the websites -> Current set to block from 8:00 am to 4:00 pm
     if dt(dt.now().year, dt.now().month, dt.now().day,8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day,16):
         print("Working Hours")
         #Open the hosts file in read-write mode
