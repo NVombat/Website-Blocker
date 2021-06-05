@@ -40,3 +40,4 @@ sudo crontab -e -> opens crontab file as an administrator
 Ctrl X Ctrl Y to save and exit
 
 NOTE: USE ABSOLUTE PATHS AS THE SCHEDULERS WORK FROM DIFFERENT DIRECTORIES
+NOTE: TO COPY "hosts" FILE ONTO DESKTOP OR ANY DIRECTORY -> "cp hosts /home/nvombat/Desktop" (Linux & MAC) (cp hosts path_where_file_is_being_copied)
